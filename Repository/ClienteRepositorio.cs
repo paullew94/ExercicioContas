@@ -11,7 +11,7 @@ namespace Repository
 {
     public class ClienteRepositorio
     {
-        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\contas.mdf;Integrated Security=True;Connect Timeout=30";
+        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Usuario\Documents\teste.mdf;Integrated Security=True;Connect Timeout=30";
 
         public void Inserir(Cliente cliente)
         {
@@ -119,9 +119,6 @@ namespace Repository
             comando.Parameters.AddWithValue("@RG", cliente.Rg);
             comando.ExecuteNonQuery();
             conexao.Close();
-
-
-
         }
     }
 }

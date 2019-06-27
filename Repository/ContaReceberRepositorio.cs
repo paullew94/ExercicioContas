@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    class ContaReceberRepositorio
+    public class ContaReceberRepositorio
     {
+
+        
     }
 }

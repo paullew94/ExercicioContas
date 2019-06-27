@@ -21,7 +21,7 @@ namespace TelaPrincipal
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(lblID.Text == "")
+            if (lblID.Text == "")
             {
                 Inserir();
 
@@ -81,11 +81,41 @@ namespace TelaPrincipal
             List<Cliente> clientes = repositorio.ObterTodos(busca); dataGridView1.RowCount = 0;
             for (int i = 0; i < clientes.Count; i++)
             {
-                 Cliente cliente= clientes[i];
-                dataGridView1.Rows.Add
+                Cliente cliente = clientes[i];
+                dataGridView1.Rows.Add(new object[] { cliente.Id, cliente.Nome });
             }
+        }
+
+        private void txtBusca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AtualizarTabela();
+            }
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteRepositorio repositorio = new ClienteRepositorio();
+            repositorio.Apagar(id);
+            AtualizarTabela();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ClienteRepositorio repositorio = new ClienteRepositorio();
+
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            Cliente cliente = repositorio.ObterPeloId(id);
+            if (cliente != null)
+            {
+                txtNome.Text = cliente.Nome;
+                mtbCpf.Text = cliente.Cpf.ToString();
+                mtbDataNascimento.Text = cliente.DataNascimento.ToString();
+                mtbRG.Text = cliente.Rg.ToString();
+                lblID.Text = cliente.Id.ToString();
+            }
+        }
     }
-
-
-
 }
