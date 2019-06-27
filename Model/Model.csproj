@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="ContasAPagar.cs" />
     <Compile Include="ContasAReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

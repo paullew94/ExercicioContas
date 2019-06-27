@@ -41,14 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientesRepositorio.cs" />
-    <Compile Include="ContasAPagarRepositorio.cs" />
-    <Compile Include="ContasReceberRepositorio.cs" />
+    <Compile Include="ClienteRepositorio.cs" />
+    <Compile Include="ContaAPagarRepositorio.cs" />
+    <Compile Include="ContaReceberRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Clientes.sql" />
     <Content Include="EstruturaContasAPagar.sql" />
     <Content Include="EstruturaContasAReceber.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{59e9760e-2285-4bcf-b4a2-81535ce93fed}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
