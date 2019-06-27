@@ -12,7 +12,7 @@ namespace Model
         public string Nome;
         public decimal Valor;
         public string Tipo;
-        public string DataVencimento;
+        public DateTime DataVencimento;
 
     }
 }

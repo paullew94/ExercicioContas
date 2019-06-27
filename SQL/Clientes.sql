@@ -1,0 +1,7 @@
+﻿CREATE TABLE clientes(
+id INT PRIMARY KEY IDENTITY(1,1),
+nome VARCHAR(100),
+cpf VARCHAR(15),
+data_nascimento DATETIME2,
+rg VARCHAR (15)
+);

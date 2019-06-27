@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EstruturaContasAPagar.sql" />
+    <Content Include="EstruturaContasAReceber.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

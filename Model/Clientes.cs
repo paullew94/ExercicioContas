@@ -11,7 +11,8 @@ namespace Model
         public int Id;
         public string Nome;
         public string Cpf;
-        public string Data_Nascimento;
+        public DateTime DataNascimento;
         public string Rg;
+
     }
 }
