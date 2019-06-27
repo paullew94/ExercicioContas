@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class ContasAPagar
+    public class ContaAPagar
     {
         public int Id;
         public string Nome;
