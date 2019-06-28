@@ -10,7 +10,8 @@ namespace Model
     {
         public int Id;
         public string Nome;
-        public decimal ValorReceber;
+        public decimal Valor;
+        public decimal ValorRecebido;
         public DateTime DataRecebimento;
         public bool Recebido;
 

@@ -10,8 +10,7 @@ namespace Model
     {
         public int Id;
         public string Nome;
-        public decimal Valor;
-
+        public decimal Valor;     
         public string Tipo;
         public DateTime DataVencimento;
 
