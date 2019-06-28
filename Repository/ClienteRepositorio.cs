@@ -11,7 +11,7 @@ namespace Repository
 {
     public class ClienteRepositorio
     {
-        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Usuario\Documents\teste.mdf;Integrated Security=True;Connect Timeout=30";
+        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\contas.mdf;Integrated Security=True;Connect Timeout=30";
 
         public void Inserir(Cliente cliente)
         {
@@ -21,7 +21,7 @@ namespace Repository
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = @"INSERT INTO cliente (nome,cpf,data_nascimento,rg) VALUES (@NOME,@CPF,@DATA_NASCIMENTO,@RG)";
+            comando.CommandText = @"INSERT INTO clientes (nome,cpf,data_nascimento,rg) VALUES (@NOME,@CPF,@DATA_NASCIMENTO,@RG)";
             comando.Parameters.AddWithValue("@NOME", cliente.Nome);
             comando.Parameters.AddWithValue("@CPF", cliente.Cpf);
             comando.Parameters.AddWithValue("@DATA_NASCIMENTO", cliente.DataNascimento);
@@ -71,7 +71,7 @@ namespace Repository
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "DELETE FROM cliente WHERE ID =@ID";
+            comando.CommandText = "DELETE FROM clientes WHERE ID =@ID";
             comando.Parameters.AddWithValue("@ID", id);
             comando.ExecuteNonQuery();
             conexao.Close();

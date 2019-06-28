@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class ContaAReceber
+    public class ContaReceber
     {
         public int Id;
         public string Nome;

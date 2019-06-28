@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class ContaAPagarRepositorio
+    public class ContaPagarRepositorio
     {
-        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Usuario\Documents\teste.mdf;Integrated Security=True;Connect Timeout=30";
+        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\contas.mdf;Integrated Security=True;Connect Timeout=30";
 
-        public void Inserir(ContaAPagar contaAPagar)
+        public void Inserir(ContaPagar contaPagar)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -22,15 +22,15 @@ namespace Repository
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.CommandText = @"INSERT INTO contas_pagar(nome,valor,tipo,data_vencimento) VALUES (@NOME,@VALOR,@TIPO,@DATA_VENCIMENTO)";
-            comando.Parameters.AddWithValue("@NOME", contaAPagar.Nome);
-            comando.Parameters.AddWithValue("@VALOR", contaAPagar.Valor);
-            comando.Parameters.AddWithValue("@TIPO", contaAPagar.Tipo);
-            comando.Parameters.AddWithValue("@DATA_VENCIMENTO", contaAPagar.DataVencimento);
+            comando.Parameters.AddWithValue("@NOME", contaPagar.Nome);
+            comando.Parameters.AddWithValue("@VALOR", contaPagar.Valor);
+            comando.Parameters.AddWithValue("@TIPO", contaPagar.Tipo);
+            comando.Parameters.AddWithValue("@DATA_VENCIMENTO", contaPagar.DataVencimento);
             comando.ExecuteNonQuery();
             conexao.Close();
         }
 
-        public List<ContaAPagar> ObterTodos(string busca)
+        public List<ContaPagar> ObterTodos(string busca)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -46,19 +46,19 @@ namespace Repository
             tabela.Load(comando.ExecuteReader());
             conexao.Close();
 
-            List<ContaAPagar> contasAPagar = new List<ContaAPagar>();
+            List<ContaPagar> contasPagar = new List<ContaPagar>();
             for (int i = 0; i < tabela.Rows.Count; i++)
             {
                 DataRow linha = tabela.Rows[i];
-                ContaAPagar contaAPagar = new ContaAPagar();
-                contaAPagar.Id = Convert.ToInt32(linha["id"]);
-                contaAPagar.Nome = linha["nome"].ToString();
-                contaAPagar.Valor = Convert.ToDecimal(linha["valor"]);
-                contaAPagar.Tipo = linha["tipo"].ToString();
-                contaAPagar.DataVencimento = Convert.ToDateTime(linha["data_vencimento"]);
-                contasAPagar.Add(contaAPagar);
+                ContaPagar contaPagar = new ContaPagar();
+                contaPagar.Id = Convert.ToInt32(linha["id"]);
+                contaPagar.Nome = linha["nome"].ToString();
+                contaPagar.Valor = Convert.ToDecimal(linha["valor"]);
+                contaPagar.Tipo = linha["tipo"].ToString();
+                contaPagar.DataVencimento = Convert.ToDateTime(linha["data_vencimento"]);
+                contasPagar.Add(contaPagar);
             }
-            return contasAPagar;
+            return contasPagar;
         }
 
         public void Apagar(int id)
@@ -69,12 +69,12 @@ namespace Repository
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "DELETE FROM cliente WHERE ID =@ID";
+            comando.CommandText = "DELETE FROM contas_pagar WHERE ID =@ID";
             comando.Parameters.AddWithValue("@ID", id);
             comando.ExecuteNonQuery();
             conexao.Close();
         }
-        public ContaAPagar ObterPeloId(int id)
+        public ContaPagar ObterPeloId(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -92,15 +92,15 @@ namespace Repository
             }
 
             DataRow linha = tabela.Rows[0];
-             ContaAPagar contaAPagar= new ContaAPagar();
-            contaAPagar.Id = id;
-            contaAPagar.Nome = linha["nome"].ToString();
-            contaAPagar.Valor = Convert.ToDecimal(linha["valor"]);
-            contaAPagar.Tipo = linha["tipo"].ToString();
-            contaAPagar.DataVencimento = Convert.ToDateTime(linha["data_vencimento"]);
-            return contaAPagar;
+             ContaPagar contaPagar= new ContaPagar();
+            contaPagar.Id = id;
+            contaPagar.Nome = linha["nome"].ToString();
+            contaPagar.Valor = Convert.ToDecimal(linha["valor"]);
+            contaPagar.Tipo = linha["tipo"].ToString();
+            contaPagar.DataVencimento = Convert.ToDateTime(linha["data_vencimento"]);
+            return contaPagar;
         }
-        public void Alterar(ContaAPagar contaAPagar)
+        public void Alterar(ContaPagar contaPagar)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -110,10 +110,10 @@ namespace Repository
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.CommandText = "UPDATE clientes SET nome=@NOME,valor=@VALOR,tipo=@TIPO,data_vencimento@DATA_VENCIMENTO";
-            comando.Parameters.AddWithValue("@NOME", contaAPagar.Nome);
-            comando.Parameters.AddWithValue("@VALOR", contaAPagar.Valor);
-            comando.Parameters.AddWithValue("@TIPO", contaAPagar.Tipo);
-            comando.Parameters.AddWithValue("@DATA_VENCIMENTO", contaAPagar.DataVencimento);
+            comando.Parameters.AddWithValue("@NOME", contaPagar.Nome);
+            comando.Parameters.AddWithValue("@VALOR", contaPagar.Valor);
+            comando.Parameters.AddWithValue("@TIPO", contaPagar.Tipo);
+            comando.Parameters.AddWithValue("@DATA_VENCIMENTO", contaPagar.DataVencimento);
             comando.ExecuteNonQuery();
             conexao.Close();
         }

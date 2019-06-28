@@ -1,0 +1,7 @@
+T:\Documentos\GitHub\ExercicioContas\Model\bin\Debug\Model.dll.config
+T:\Documentos\GitHub\ExercicioContas\Model\bin\Debug\Model.dll
+T:\Documentos\GitHub\ExercicioContas\Model\bin\Debug\Model.pdb
+T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.csprojAssemblyReference.cache
+T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.dll
+T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.pdb

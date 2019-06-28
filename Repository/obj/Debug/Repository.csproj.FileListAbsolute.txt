@@ -1,0 +1,10 @@
+T:\Documentos\GitHub\ExercicioContas\Repository\bin\Debug\Repository.dll
+T:\Documentos\GitHub\ExercicioContas\Repository\bin\Debug\Repository.pdb
+T:\Documentos\GitHub\ExercicioContas\Repository\bin\Debug\Model.dll
+T:\Documentos\GitHub\ExercicioContas\Repository\bin\Debug\Model.pdb
+T:\Documentos\GitHub\ExercicioContas\Repository\bin\Debug\Model.dll.config
+T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.CopyComplete
+T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.dll
+T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.pdb
