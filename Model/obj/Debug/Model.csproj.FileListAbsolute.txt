@@ -5,3 +5,10 @@ T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.csprojAssemblyReferen
 T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.dll
 T:\Documentos\GitHub\ExercicioContas\Model\obj\Debug\Model.pdb
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\bin\Debug\Model.dll.config
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\bin\Debug\Model.dll
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\bin\Debug\Model.pdb
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\obj\Debug\Model.dll
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Model\obj\Debug\Model.pdb

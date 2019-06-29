@@ -95,6 +95,13 @@ namespace TelaPrincipal
             ContaReceber contaReceber= repositorio.ObterPeloId(id);
             if (contaReceber != null)
             {
+                txtNome.Text = contaReceber.Nome;
+                mtbValor.Text = contaReceber.Valor.ToString();
+                mtbValorRecibido.Text = contaReceber.ValorRecebido.ToString();
+                mtbDataRecebimento.Text = contaReceber.DataRecebimento.ToString();
+                ckbRecibido.Text=contaReceber.Recebido.ToString();
+                lblId.Text = contaReceber.Id.ToString();
+
 
             }
         }

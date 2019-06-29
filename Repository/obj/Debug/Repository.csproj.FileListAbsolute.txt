@@ -8,3 +8,13 @@ T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.Core
 T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.CopyComplete
 T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.dll
 T:\Documentos\GitHub\ExercicioContas\Repository\obj\Debug\Repository.pdb
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\bin\Debug\Repository.dll
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\bin\Debug\Repository.pdb
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\bin\Debug\Model.dll
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\bin\Debug\Model.pdb
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\bin\Debug\Model.dll.config
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\obj\Debug\Repository.dll
+C:\Users\Usuario\Documents\GitHub\ExercicioContas\Repository\obj\Debug\Repository.pdb
