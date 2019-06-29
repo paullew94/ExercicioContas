@@ -26,7 +26,17 @@ namespace TelaPrincipal
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (lblId.Text == "")
+            {
+                Inserir();
 
+            }
+            else
+            {
+                Alterar();
+            }
+            LimparCampos();
+            AtualizarTabela();
         }
         private void Inserir()
         {
@@ -91,6 +101,7 @@ namespace TelaPrincipal
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ContaReceberRepositorio repositorio = new ContaReceberRepositorio();
+
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             ContaReceber contaReceber= repositorio.ObterPeloId(id);
             if (contaReceber != null)
